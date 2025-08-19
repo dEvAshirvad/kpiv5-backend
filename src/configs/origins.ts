@@ -14,6 +14,7 @@ const origins = [
   'https://rahatapi.rdmp.in',
   'https://urvi.rdmp.in',
   'http://69.62.77.63:6030',
+  'http://69.62.77.63:6031',
 ];
 
 export default origins;
