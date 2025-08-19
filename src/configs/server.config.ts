@@ -71,7 +71,14 @@ export default function createApp() {
   app.use(express.urlencoded({ extended: true, limit: '2048mb' }));
   app.use(serveEmojiFavicon('🔥'));
   app.get('/', (_, res) => {
-    Respond(res, { message: 'API services are nominal!!' }, 200);
+    Respond(
+      res,
+      {
+        message: 'API services are nominal!!',
+        routes: ['/api/auth/get-session', '/api/v1/departments'],
+      },
+      200
+    );
   });
   app.use(sessions);
   app.use('/api/v1', router);
